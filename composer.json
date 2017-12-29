@@ -1,0 +1,9 @@
+{
+    "name": "fooman/magento2-phpunit-bridge",
+    "license": ["BSD-3-Clause"],
+    "autoload": {
+        "psr-4": {
+            "Fooman\\PhpunitBridge\\": "src/"
+        }
+    }
+}
