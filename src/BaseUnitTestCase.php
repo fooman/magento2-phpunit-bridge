@@ -15,7 +15,6 @@ class BaseUnitTestCase extends \Magento\Framework\TestFramework\Unit\BaseTestCas
                     ->disableOriginalConstructor()
                     ->disableOriginalClone()
                     ->disableArgumentCloning()
-                    ->disallowMockingUnknownTypes()
                     ->getMock();
 	}
 
@@ -29,7 +28,6 @@ class BaseUnitTestCase extends \Magento\Framework\TestFramework\Unit\BaseTestCas
                     ->disableOriginalConstructor()
                     ->disableOriginalClone()
                     ->disableArgumentCloning()
-                    ->disallowMockingUnknownTypes()
                     ->setMethods(empty($methods) ? null : $methods)
                     ->getMock();
 	}
