@@ -2,7 +2,7 @@
 
 namespace Fooman\PhpunitBridge;
 
-class BaseUnitTestCase extends \Magento\Framework\TestFramework\Unit\BaseTestCase
+class BaseUnitTestCase extends CompatTestCase
 {
 
 	protected function createMock($originalClassName)
