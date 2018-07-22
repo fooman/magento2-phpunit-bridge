@@ -13,8 +13,16 @@ and then have your tests extend `\Fooman\PhpunitBridge\BaseUnitTestCase`:
 ```
 <?php
 
-class MyClassToTest extend \Fooman\PhpunitBridge\BaseUnitTestCase
+use Magento\Framework\TestFramework\Unit\Helper\ObjectManager;
+
+class MyClassToTest extends \Fooman\PhpunitBridge\BaseUnitTestCase
 {
+
+    public function setUp()
+    {
+        $objectManager = new ObjectManager($this);
+    }
+
     public function testFunctionality()
     {
         $mock = $this->createMock(\Vendor\Module\MyClass::class);
