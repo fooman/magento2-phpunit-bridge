@@ -5,5 +5,9 @@
         "psr-4": {
             "Fooman\\PhpunitBridge\\": "src/"
         }
+    },
+    "require": {
+        "phpunit/phpunit": "^4.1 | ^6.2",
+        "magento/framework": "^100.0 | ^101.0.0"
     }
 }
