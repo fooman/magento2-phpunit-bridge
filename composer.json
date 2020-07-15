@@ -7,7 +7,7 @@
         }
     },
     "require": {
-        "phpunit/phpunit": "^4.1 | ^6.2",
-        "magento/framework": "^100.0 | ^101.0. | ^102.0.0"
+        "phpunit/phpunit": "^4.1 | ^6.2 | ^9.1",
+        "magento/framework": "^100.0 | ^101.0. | ^102.0.0 | ^102.0.0"
     }
 }
