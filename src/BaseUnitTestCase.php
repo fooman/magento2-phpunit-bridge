@@ -24,6 +24,15 @@ class BaseUnitTestCase extends CompatTestCase
         }
     }
 
+    public static function assertIsString($actual, string $message = ''): void
+    {
+        if (is_callable('parent::assertIsString')) {
+            parent::assertIsString($actual, $message);
+        } else {
+            parent::assertInternalType('string', $actual, $message);
+        }
+    }
+
     private function useMockBuilderToCreateMock(
         $originalClassName,
         $methods,
