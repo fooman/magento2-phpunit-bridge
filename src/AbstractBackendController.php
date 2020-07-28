@@ -14,4 +14,13 @@ class AbstractBackendController extends MagentoAbstractBackendController
             parent::assertContains($needle, $haystack, $message);
         }
     }
+
+    public static function assertStringNotContainsString(string $needle, string $haystack, string $message = ''): void
+    {
+        if (is_callable('parent::assertStringContainsString')) {
+            parent::assertStringNotContainsString($needle, $haystack, $message);
+        } else {
+            parent::assertNotContains($needle, $haystack, $message);
+        }
+    }
 }
