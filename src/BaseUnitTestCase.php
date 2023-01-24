@@ -8,7 +8,7 @@ class BaseUnitTestCase extends CompatTestCase
 {
     public static function assertStringContainsString(string $needle, string $haystack, string $message = ''): void
     {
-        if (is_callable('parent::assertStringContainsString')) {
+        if (is_callable(self::class . '::assertStringContainsString')) {
             parent::assertStringContainsString($needle, $haystack, $message);
         } else {
             parent::assertContains($needle, $haystack, $message);
@@ -17,7 +17,7 @@ class BaseUnitTestCase extends CompatTestCase
 
     public static function assertStringNotContainsString(string $needle, string $haystack, string $message = ''): void
     {
-        if (is_callable('parent::assertStringContainsString')) {
+        if (is_callable(self::class . '::assertStringContainsString')) {
             parent::assertStringNotContainsString($needle, $haystack, $message);
         } else {
             parent::assertNotContains($needle, $haystack, $message);
@@ -26,7 +26,7 @@ class BaseUnitTestCase extends CompatTestCase
 
     public static function assertIsString($actual, string $message = ''): void
     {
-        if (is_callable('parent::assertIsString')) {
+        if (is_callable(self::class . '::assertIsString')) {
             parent::assertIsString($actual, $message);
         } else {
             parent::assertInternalType('string', $actual, $message);
